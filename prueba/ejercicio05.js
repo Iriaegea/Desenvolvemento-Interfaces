@@ -4,4 +4,17 @@
 // Muestra en consola las pistas desde la 1 hasta la N, imprimiendo el número de 
 // pista repetido tantas veces como su propio valor (ej: Pista 1 una vez, Pista 2 dos veces...).
 //################################################################################
-// Escribe tu código aquí
+// Escribe tu código aquí 
+let numeroTotalPistas = parseInt(prompt(`Escribe el número total de pistas (entre 1 y 20): `))
+let repeticion = ""
+let contador = 0
+for (let index = 1; index <=numeroTotalPistas; index++){
+    while (contador < index){
+        repeticion += String(index) + " "
+        contador ++
+    }
+    
+    console.log(`Pista ${repeticion}`)
+    repeticion = ""
+    contador = 0
+}

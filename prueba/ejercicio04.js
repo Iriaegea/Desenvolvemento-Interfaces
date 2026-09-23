@@ -15,4 +15,4 @@ for (let ingreso of ingresos){
 
 }
 
-console.log(`Total: ${total} Media: ${int(total/ingresos.length())}`)
+console.log(`Total: ${total} Media: ${(total/ingresos.length).toFixed(2)}`)
