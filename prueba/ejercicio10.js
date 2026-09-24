@@ -5,3 +5,16 @@
 // de combinaciones posibles.
 //################################################################################
 // Escribe tu código aquí
+let numeroEquipos = parseInt(prompt(`Número de equipos: `))
+let totalPartidos = 0
+for (let index = 1; index <= numeroEquipos; index++) {
+    for (let j = 1; j < numeroEquipos; j++) {
+        totalPartidos ++
+        
+    }
+    
+}
+
+
+
+console.log(`Las combinaciones totales son: ${totalPartidos }`)
