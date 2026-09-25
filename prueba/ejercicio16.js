@@ -4,3 +4,16 @@
 // en caso contrario imprime 'PISTAS EXTERIORES'. El programa termina al introducir un espacio.
 //################################################################################
 // Escribe tu código aquí
+let letraSector
+const vocales = ['A', 'E', 'I', 'O', 'U']
+do{
+letraSector = prompt(`Escribe una letra: `).toUpperCase()
+if(letraSector!= " "){
+    if(vocales.includes(letraSector) ){
+    console.log(`Pabellón cubierto`)
+} else {
+    console.log(`Pistas exteriores`)
+}
+}
+} while (letraSector != " ")
+
