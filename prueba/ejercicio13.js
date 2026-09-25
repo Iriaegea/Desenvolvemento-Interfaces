@@ -6,13 +6,16 @@
 // Escribe tu código aquí
 let introducido
 let recaudacionFinal = 0
+let contador = 0
+
 
 do{
     introducido= parseFloat(prompt(`Introduce un cobro`))
     
-     recaudacionFinal += introducido
+    recaudacionFinal += introducido
+    contador ++
     
     
 }while(introducido != 0)
 
-    console.log(`La recaudacion final es de: ${recaudacionFinal}`)
+    console.log(`La recaudacion final es de: ${recaudacionFinal} y la media es de: ${recaudacionFinal/contador}`)
