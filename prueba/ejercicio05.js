@@ -10,7 +10,7 @@ let repeticion = ""
 let contador = 0
 for (let index = 1; index <=numeroTotalPistas; index++){
     while (contador < index){
-        repeticion += String(index) + " "
+        repeticion += index + " "
         contador ++
     }
     

@@ -4,3 +4,15 @@
 // Al terminar, debe imprimir la recaudación total y el ticket medio por cobro.
 //################################################################################
 // Escribe tu código aquí
+let introducido
+let recaudacionFinal = 0
+
+do{
+    introducido= parseFloat(prompt(`Introduce un cobro`))
+    
+     recaudacionFinal += introducido
+    
+    
+}while(introducido != 0)
+
+    console.log(`La recaudacion final es de: ${recaudacionFinal}`)
