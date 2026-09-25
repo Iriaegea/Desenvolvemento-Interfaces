@@ -5,3 +5,14 @@
 // cuántos son negativos (devolución al cliente) y cuántos son iguales a 0 (cancelación neutra).
 //################################################################################
 // Escribe tu código aquí
+
+let solicitudesARevisar = parseInt(prompt(`Cuántas solicitudes quedan por revisar? `))
+
+
+if(solicitudesARevisar > 0){
+    console.log(`Cobro de penalización`)
+} else if (solicitudesARevisar < 0 ){
+    console.log(`Devolución al cliente`)
+} else {
+    console.log(`Cancelación neutra`)
+}
