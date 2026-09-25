@@ -7,24 +7,12 @@
 // Escribe tu código aquí
 
 let solicitudesARevisar = parseInt(prompt(`Cuántas solicitudes quedan por revisar? `))
-let balance 
-let positivos = 0, negativos = 0, neutros = 0
-while(solicitudesARevisar > 0){
-    balance = prompt(`Introduce el numero: `)
-    if(balance > 0){
-    positivos ++
-    } else if (solicitudesARevisar < 0 ){
-    negativos ++
-    } else {
-    neutros ++
-    }
 
 
-
-    solicitudesARevisar --
+if(solicitudesARevisar > 0){
+    console.log(`Cobro de penalización`)
+} else if (solicitudesARevisar < 0 ){
+    console.log(`Devolución al cliente`)
+} else {
+    console.log(`Cancelación neutra`)
 }
-
-
-
-console.log(`Positivo: ${positivos}, Negativo: ${negativos}, Neutro: ${neutros}`)
-

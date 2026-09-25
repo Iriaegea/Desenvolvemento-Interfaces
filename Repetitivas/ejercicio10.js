@@ -15,4 +15,6 @@ for (let index = 1; index <= numeroEquipos; index++) {
     
 }
 
+
+
 console.log(`Las combinaciones totales son: ${totalPartidos }`)

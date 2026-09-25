@@ -5,14 +5,17 @@
 // acumulado tras los 20 meses.
 //################################################################################
 // Escribe tu código aquí
- let mes = 0
- let precio =0
-let totalFinal = 0
+ let mes = parseInt(0)
+ let precio = parseInt(0)
+let totalFinal = parseInt(0)
  while (mes < 20){
     precio +=10
     totalFinal += precio
     console.log(`Mes: ${mes+1}
 A pagar: ${precio}`)
+    
+    
+    
     mes++
  }
 
