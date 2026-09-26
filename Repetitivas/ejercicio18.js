@@ -9,4 +9,33 @@
 //################################################################################
 // Escribe tu código aquí
 
+let limiteSuperior=prompt(`Escribe el límite superior: `) 
+let limiteInferior
+do{
+limiteInferior = prompt(`Dime el límite inferior: `)
+}while(limiteInferior>limiteSuperior)
 
+
+
+let sumaDentro = 0;
+let partidosFuera = 0;
+let algunPartidoEnLimite = false;
+
+let espectadores = parseInt(prompt("Escribe el número de espectadores (0 para terminar):"));
+
+while (espectadores != 0) {
+  if (espectadores == limiteInferior || espectadores == limiteSuperior) {
+    algunPartidoEnLimite = true;
+  }
+
+  if (espectadores > limiteInferior && espectadores < limiteSuperior) {
+    sumaDentro += espectadores;
+  } else {
+    partidosFuera++;
+  }
+
+  espectadores = parseInt(prompt("Escribe el número de espectadores (0 para terminar):"));
+}
+
+console.log(`Suma de espectadores: ${sumaDentro}`);
+console.log(`Partidos: ${partidosFuera}`);
