@@ -4,3 +4,17 @@
 // mayúsculas a minúsculas y las minúsculas a mayúsculas.
 //################################################################################
 // Escribe tu código aquí
+
+let cadenaOriginal = prompt(`Escrbe una cadena: `)
+let cadenaCambiada = ""
+
+for (let letra of cadenaOriginal){
+    if(letra == letra.toUpperCase()){
+        cadenaCambiada+= letra.toLowerCase()
+    } else {
+        cadenaCambiada += letra.toUpperCase()
+    }
+} 
+
+
+console.log(cadenaCambiada)
