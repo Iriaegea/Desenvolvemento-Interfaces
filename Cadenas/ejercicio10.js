@@ -15,7 +15,7 @@ for (let i = cuponNormal.length-1; i >= 0; i--) {
 
 
 if (cuponNormal == cuponInvertido){
-    console.log(`SON PAL´NDROMOS`)
+    console.log(`ES PALÍNDROMO`)
 }else{
-    console.log(`NO SON PALÍNDROMOS`)
+    console.log(`NO ES PALÍNDROMO`)
 }
