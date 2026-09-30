@@ -22,3 +22,22 @@ for (let notaActual of notas){
     suma += notaActual
 }
 console.log(`MEDIA: ${suma/notas.length}`)
+
+
+
+// funcion de media con reduce:
+function sumarTodo(contador, num){  //reduce coge el primer elemento y lo usa de contador y el segundo como elemento del array
+    return contador + num
+}
+
+
+//media con reduce
+let sumaTotal = notas.reduce(sumarTodo)
+
+// media con reduce con funcion flecha
+let sumaTotalFlecha = notas.reduce(function())
+
+console.log(`Media: ${sumaTotal/notas.length}`)
+
+
+// Array.from
