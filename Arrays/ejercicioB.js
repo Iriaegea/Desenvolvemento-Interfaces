@@ -18,11 +18,13 @@ do{
 cadenasInvertidas = cadenas
 cadenasInvertidas.reverse()
 
-cadenasInvertidas.map(delReves(frase){
-  return  frase.reverse()
+
+//usando map
+cadenasInvertidas.map(function(frase){
+  return  frase.split("").reverse().join("")
 })
 // invertir cada letra de cada elemento
 for (let frase of cadenasInvertidas){
-    frase.reverse()
+    frase.split("").reverse().join("")
 
 }
