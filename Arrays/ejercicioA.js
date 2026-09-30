@@ -1,3 +1,10 @@
+//################################################################################
+// EJERCICIO A
+// Generar un vector "temperaturas" de 7 valores aleatorios entre -5 y 35 grados.
+// Mostrar cada temperatura junto con su equivalente en Fahrenheit y si es
+// "Fría", "Templada" o "Calurosa".
+//################################################################################
+
 const temperaturas = []
 let fahrenheit = 0
 while (temperaturas.length != 7){

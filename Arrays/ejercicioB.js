@@ -5,26 +5,35 @@
 //################################################################################
 
 const cadenas = []
-const cadenasInvertidas
+const cadenasInvertidas = []
 let cadena = ""
 
 do{
     cadena = prompt("Escribe una frase: ")
-    cadenas.push(cadena)
-} while (cadenas.length!= 5)
+    cadenasInvertidas.push(cadena)
+} while (cadenasInvertidas.length!= 5)
 
 
-// invertir los elementos del array
-cadenasInvertidas = cadenas
+
+    // invertir los elementos del array
+
 cadenasInvertidas.reverse()
 
 
 //usando map
-cadenasInvertidas.map(function(frase){
+const resultado = cadenasInvertidas.map(function(frase){
   return  frase.split("").reverse().join("")
 })
-// invertir cada letra de cada elemento
-for (let frase of cadenasInvertidas){
-    frase.split("").reverse().join("")
 
-}
+
+
+//usando map con funcion flecha
+//cadenasInvertidas.map((frase)=> frase.split("").reverse().join(""))
+
+// invertir cada letra de cada elemento
+//for (let frase of cadenasInvertidas){
+  //  frase.split("").reverse().join("")
+
+//}
+
+console.log(resultado)
