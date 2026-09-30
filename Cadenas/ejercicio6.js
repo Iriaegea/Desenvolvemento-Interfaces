@@ -13,3 +13,8 @@ for (let i = nombrePista.length;  i>= 0; i--) {
 
 
 console.log(`Invertido: ${invertido}`)
+
+
+// se puede usar reverse
+
+nombrePista.split("").reverse().join()
