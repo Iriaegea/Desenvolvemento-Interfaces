@@ -10,10 +10,7 @@ let num
 let contadorSuma = 0
 let productos = 0
 
-
-
-
-
+ 
 do{
     num = parseInt(prompt("Escribe un número primer array: "))
     vector1.push(num)
@@ -23,6 +20,7 @@ do{
     num = parseInt(prompt("Escribe un número segundo array: "))
     vector2.push(num)
 } while (vector2.length!= 5)
+
 
 vector3 =  vector1.map((n, i, array) => n * vector2[i])
 
