@@ -14,11 +14,15 @@ const vector = []
 let respuesta
 
 do {
-respuesta = parseInt(prompt("Escribe un número: "))
+respuesta = parseInt(prompt("Escribe un número: ")) // no se puede hacer arrayfrom pq con 0 sale
 vector.push(respuesta)
 } while (vector.length != 7 && respuesta != 0)
 
 console.log(vector)
 
-let sumaVector= vector.reduce(sumarTodos) // con funcion
+//let sumaVector= vector.reduce(sumarTodos) // con funcion
+
+// funcion flecha
+let sumaVector= vector.reduce( ( total, numero)=> total + numero)
+
 console.log(sumaVector)

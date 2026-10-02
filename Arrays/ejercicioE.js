@@ -12,14 +12,10 @@ do{
     vector.push(numero)
 }while(vector.length!= 7)
  
-
 //ordenar
 vector.sort()
-
 console.log(vector )
 
-
-
 //mediana (el del medio)
-let mediana = vector[Math.floor(vector.length/2)]
+let mediana = vector[Math.floor(vector.length-1/2)]
 console.log(mediana)

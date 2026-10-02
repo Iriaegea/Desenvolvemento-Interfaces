@@ -4,6 +4,23 @@
 // y cuántas son aprobado (>=5).
 //################################################################################
 
+// correccion
+const notas = Array.from({length: 6}, (_,i) => parseInt(prompt(`Dime la ${i+1} nota`))) // declarar asi mejor
+
+let aprobados = notas.filter(x => x >=5).length
+let sum = (notas.reduce((x,y)=>{x+=y}))
+console.log(sum)
+console.log(notas)
+console.log(`Nota media: ${(sum/notas.length).toFixed(1)}`)
+
+//Usar sort para sacar la más alta y la más baja
+       
+
+
+
+/////////////////////////////////////////
+
+
 const notas = []
 let nota
 do{
@@ -40,4 +57,4 @@ let sumaTotalFlecha = notas.reduce(function())
 console.log(`Media: ${sumaTotal/notas.length}`)
 
 
-// Array.from
+

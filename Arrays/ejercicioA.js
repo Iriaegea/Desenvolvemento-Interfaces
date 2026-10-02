@@ -4,12 +4,20 @@
 // Mostrar cada temperatura junto con su equivalente en Fahrenheit y si es
 // "Fría", "Templada" o "Calurosa".
 //################################################################################
+const temperaturasCorreccion = Array.from({length: 7}, () => Math.floor(Math.random()*41)-5)
+temperaturasCorreccion.forEach(t => {
+    const f = (t * 9/5 + 32).toFixed(1);
+    const categoria = t< 10 ? "Fria" : t < 25 ? "Templada" : "Calurosa"
+    console.log(`Temperatura: ${t}ºC, Fahrenheit: ${f}ºF, Categoria: ${categoria}`)
+})
+
+////////////////////////////////////////////////////////////////////
 
 const temperaturas = []
 let fahrenheit = 0
 while (temperaturas.length != 7){
     temperaturas.push(Math.floor(Math.random() * (35 - (-5+1)) )+-5)
-
+    
 }
 
 for (let temp of temperaturas){

@@ -5,6 +5,17 @@
 //################################################################################
 
 
+// corrección 
+const vector = Array.from({length: 7}, (_, index) =>prompt(` Introduce la ${index+1} cadena`)) // barra baja pq no m einteresa
+const vector2 = vector.map((cadena) => cadena.split("").reverse().join(""))
+
+console.log(vector2);
+
+
+
+
+
+//////////////////////////
 const cadenasInvertidas = []
 let cadena = ""
 
