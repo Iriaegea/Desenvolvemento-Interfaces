@@ -48,11 +48,100 @@ const arrayDescontado = aplicarDescuento(productos)
 // ----------------------------------------------------------------------------
 
 // Tu código aquí:
- const generarEtiquetas = (productos) => {
-    productos.map(({nombre, precio}) => {
-        return `Producto: ${nombre} - Precio: ${precio}`
-    })
- }
+ const generarEtiquetas = (productos) => 
+    productos.map(({nombre, precio}) => 
+         `Producto: ${nombre} - Precio: ${precio}`
+    )
 
  console.log(generarEtiquetas(productos))
 
+
+// ----------------------------------------------------------------------------
+// INSTRUCCIÓN 3: Reorganizar Elementos de Arrays
+// Dada la siguiente lista con los más vendidos:
+const topVentas = ['Traje Espacial', 'Módulo de Oxígeno', 'Ración de Comida'];
+
+// Usa DESESTRUCTURACIÓN DE ARRAYS para extraer:
+// - `top1`: El primer elemento ('Traje Espacial')
+// - `top3`: El tercer elemento ('Ración de Comida')
+// PISTA: Omite el segundo elemento usando comas.
+// ----------------------------------------------------------------------------
+
+// Tu código aquí:
+
+const [top1, , top3] = topVentas 
+console.log(top1)
+console.log(top3)
+
+
+// ----------------------------------------------------------------------------
+// INSTRUCCIÓN 4: Combinar Listas con Spread Operator
+// Llegan nuevos productos:
+const nuevosProductos = [
+  { id: 5, nombre: 'Batería de Plasma', precio: 800, categoria: 'Equipamiento', stock: 8 }
+];
+
+// Usa el Spread Operator (`...`) para fusionar `productos` y `nuevosProductos` 
+// en una constante llamada `inventarioCompleto`.
+// ----------------------------------------------------------------------------
+
+// Tu código aquí:
+const inventarioCompleto = [...productos, ...nuevosProductos];
+
+
+// ----------------------------------------------------------------------------
+// INSTRUCCIÓN 5: Propiedad Calculada (enStock)
+// Crea una función flecha `agregarEstadoStock` que reciba el array de productos.
+// Usa `.map()` para retornar un nuevo array de objetos agregando la propiedad `enStock: true/false`
+// según si el `stock` es mayor a 0 (usa retorno implícito o explícito + spread operator).
+// ----------------------------------------------------------------------------
+
+// Tu código aquí:
+const agregarEstadoStock = (productos) =>
+  productos.map((producto) => ({
+    ...producto,
+    enStock: producto.stock > 0
+  }));
+
+  // ----------------------------------------------------------------------------
+// INSTRUCCIÓN 6: Filtrar Disponibles
+// Crea una función flecha `obtenerDisponibles` que reciba un array de productos.
+// Usa `.filter()` desestructurando la propiedad `stock` en los parámetros
+// para devolver solo los productos que tengan stock disponible (stock > 0).
+// ----------------------------------------------------------------------------
+
+// Tu código aquí:
+const obtenerDisponibles = (productos) => {
+  return productos.filter(({ stock }) => stock > 0);
+};
+
+
+// ----------------------------------------------------------------------------
+// INSTRUCCIÓN 7: Ordenar por Precio
+// Crea una función flecha `ordenarPorPrecioDesc` que ordene los productos de mayor a menor precio.
+// PISTA IMPORTANTE: `.sort()` MUTA (modifica) el array original.
+// Usa el Spread Operator (`[...lista]`) primero para hacer una copia y luego aplicar `.sort()`.
+// ----------------------------------------------------------------------------
+
+// Tu código aquí:
+
+const ordenarPorPrecioDesc = (lista) => {
+  return [...lista].sort((a, b) => b.precio - a.precio);
+};
+
+
+// ----------------------------------------------------------------------------
+// INSTRUCCIÓN 8: Calcular Valor Total del Inventario (NUEVO)
+// Crea una función flecha `calcularValorTotalInventario` que tome un array de productos.
+// Usa `.reduce()` desestructurando `{ precio, stock }` en cada iteración
+// para multiplicar el precio por el stock de cada producto y acumular el total general.
+// PISTA: Recuerda pasar `0` como valor inicial del acumulador.
+// ----------------------------------------------------------------------------
+
+// Tu código aquí:
+const calcularValorTotalInventario = (productos) => {
+  return productos.reduce(
+    (total, { precio, stock }) => total + precio * stock,
+    0
+  );
+};
