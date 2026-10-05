@@ -81,6 +81,7 @@ const nuevosProductos = [
   { id: 5, nombre: 'Batería de Plasma', precio: 800, categoria: 'Equipamiento', stock: 8 }
 ];
 
+
 // Usa el Spread Operator (`...`) para fusionar `productos` y `nuevosProductos` 
 // en una constante llamada `inventarioCompleto`.
 // ----------------------------------------------------------------------------
@@ -88,7 +89,7 @@ const nuevosProductos = [
 // Tu código aquí:
 const inventarioCompleto = [...productos, ...nuevosProductos];
 
-
+console.log(productos)
 // ----------------------------------------------------------------------------
 // INSTRUCCIÓN 5: Propiedad Calculada (enStock)
 // Crea una función flecha `agregarEstadoStock` que reciba el array de productos.
@@ -97,23 +98,40 @@ const inventarioCompleto = [...productos, ...nuevosProductos];
 // ----------------------------------------------------------------------------
 
 // Tu código aquí:
+
+
 const agregarEstadoStock = (productos) =>
-  productos.map((producto) => ({
+  productos.map((producto) => ({     // estoy devolviendo un objeto asi q hay q usar llaves pero no es explicita
     ...producto,
     enStock: producto.stock > 0
   }));
 
-  // ----------------------------------------------------------------------------
+console.log(productos)
+
+// ----------------------------------------------------------------------------
 // INSTRUCCIÓN 6: Filtrar Disponibles
 // Crea una función flecha `obtenerDisponibles` que reciba un array de productos.
 // Usa `.filter()` desestructurando la propiedad `stock` en los parámetros
 // para devolver solo los productos que tengan stock disponible (stock > 0).
 // ----------------------------------------------------------------------------
 
-// Tu código aquí:
-const obtenerDisponibles = (productos) => {
-  return productos.filter(({ stock }) => stock > 0);
-};
+// Tu código aquí:  FILTER CREA ARRAY NUEVO
+// const obtenerDisponibles = (productos) => {
+//   return productos.filter(({ stock }) => stock > 0);
+// };
+
+const obtenerDisponibles =  productos.filter(({ stock }) => stock > 0);
+
+
+
+console.log("Imprimiendo solo productos con stock: ")
+const nuevoArrayFiltrado = obtenerDisponibles
+console.log(nuevoArrayFiltrado)
+
+
+// console.log("Imprimiendo solo productos con stock: ")
+// const nuevoArrayFiltrado = obtenerDisponibles(productos)
+// console.log(nuevoArrayFiltrado)
 
 
 // ----------------------------------------------------------------------------
@@ -141,7 +159,5 @@ const ordenarPorPrecioDesc = (lista) => {
 // Tu código aquí:
 const calcularValorTotalInventario = (productos) => {
   return productos.reduce(
-    (total, { precio, stock }) => total + precio * stock,
-    0
-  );
+    (total, { precio, stock }) => total + precio * stock, 0);
 };
