@@ -28,7 +28,8 @@ const aplicarDescuento = (productos) => {
     productos.map((producto) =>{
     if(producto.categoria == "Equipamiento"){
         return {
-            ...producto, precio: producto.precio - (producto.precio * 0.10)
+            ...producto, 
+            precio: producto.precio - (producto.precio * 0.10)
            
         } 
     }
@@ -120,18 +121,20 @@ console.log(productos)
 //   return productos.filter(({ stock }) => stock > 0);
 // };
 
+// console.log("Imprimiendo solo productos con stock: ")
+// const nuevoArrayFiltrado = obtenerDisponibles(productos)
+// console.log(nuevoArrayFiltrado)
+
+
+// corrección
 const obtenerDisponibles =  productos.filter(({ stock }) => stock > 0);
-
-
 
 console.log("Imprimiendo solo productos con stock: ")
 const nuevoArrayFiltrado = obtenerDisponibles
 console.log(nuevoArrayFiltrado)
 
 
-// console.log("Imprimiendo solo productos con stock: ")
-// const nuevoArrayFiltrado = obtenerDisponibles(productos)
-// console.log(nuevoArrayFiltrado)
+
 
 
 // ----------------------------------------------------------------------------
