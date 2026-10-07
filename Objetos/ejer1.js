@@ -49,12 +49,11 @@ const arrayDescontado = aplicarDescuento(productos)
 // ----------------------------------------------------------------------------
 
 // Tu código aquí:
- const generarEtiquetas = (productos) => 
-    productos.map(({nombre, precio}) => 
+ const generarEtiquetas =  productos.map(({nombre, precio}) => 
          `Producto: ${nombre} - Precio: ${precio}`
     )
 
- console.log(generarEtiquetas(productos))
+ console.log(generarEtiquetas)
 
 
 // ----------------------------------------------------------------------------
@@ -70,7 +69,7 @@ const topVentas = ['Traje Espacial', 'Módulo de Oxígeno', 'Ración de Comida']
 
 // Tu código aquí:
 
-const [top1, , top3] = topVentas 
+const [top1, ,top3] = topVentas 
 console.log(top1)
 console.log(top3)
 
@@ -90,7 +89,7 @@ const nuevosProductos = [
 // Tu código aquí:
 const inventarioCompleto = [...productos, ...nuevosProductos];
 
-console.log(productos)
+console.log(inventarioCompleto)
 // ----------------------------------------------------------------------------
 // INSTRUCCIÓN 5: Propiedad Calculada (enStock)
 // Crea una función flecha `agregarEstadoStock` que reciba el array de productos.
@@ -101,8 +100,7 @@ console.log(productos)
 // Tu código aquí:
 
 
-const agregarEstadoStock = (productos) =>
-  productos.map((producto) => ({     // estoy devolviendo un objeto asi q hay q usar llaves pero no es explicita
+const agregarEstadoStock = productos.map((producto) => ({     // estoy devolviendo un objeto asi q hay q usar llaves pero no es explicita
     ...producto,
     enStock: producto.stock > 0
   }));
@@ -146,9 +144,7 @@ console.log(nuevoArrayFiltrado)
 
 // Tu código aquí:
 
-const ordenarPorPrecioDesc = (lista) => {
-  return [...lista].sort((a, b) => b.precio - a.precio);
-};
+const ordenarPorPrecioDesc = (productos) => [...productos].sort((a, b) => b.precio - a.precio);
 
 
 // ----------------------------------------------------------------------------
@@ -161,6 +157,5 @@ const ordenarPorPrecioDesc = (lista) => {
 
 // Tu código aquí:
 const calcularValorTotalInventario = (productos) => {
-  return productos.reduce(
-    (total, { precio, stock }) => total + precio * stock, 0);
+  return productos.reduce((total, { precio, stock }) => total + precio * stock, 0);
 };
