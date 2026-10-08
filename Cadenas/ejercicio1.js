@@ -6,7 +6,14 @@
 // Escribe tu código aquí
 
 let marcador = prompt(`Escribe el marcador: `)
+marcador.forEach()
+
+
+
+
 for (let index = 0; index < marcador.length; index++) {
     console.log(marcador[index])
     
 }
+
+
