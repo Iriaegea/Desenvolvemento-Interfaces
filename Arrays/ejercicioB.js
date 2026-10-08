@@ -4,6 +4,39 @@
 // pero invertidas letra a letra, y mostrar ambos vectores.
 //################################################################################
 
+const vectorrepaso = Array.from({length: 5}, (_, i) => 
+    prompt(`Escribe el texto ${i+1}`))
+
+
+vectorrepaso.forEach((textito) => 
+textito.split("").reverse().join("")
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // corrección 
 const vector = Array.from({length: 7}, (_, index) =>prompt(` Introduce la ${index+1} cadena`)) // barra baja pq no m einteresa

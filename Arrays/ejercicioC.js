@@ -4,6 +4,61 @@
 // y cuántas son aprobado (>=5).
 //################################################################################
 
+const notasRepaso = Array.from({length: 6}, (_,i)=>
+prompt(`Escribe la nota numero ${i}`)
+)
+
+console.log(notasRepaso)
+
+notasRepaso.sort((a,b) => a-b)
+
+console.log(`La nota más baja: ${notasRepaso[0]} y la nota más alta es ${notasRepaso[notasRepaso.length-1]}`)
+
+let sumaRepaso = notasRepaso.reduce((contador, nota) => contador + nota, 0)
+
+console.log(`media: ${sumaRepaso/notasRepaso.length}`)
+
+const notasAprobadas = notasRepaso.filter((nota) => nota > 5)
+
+console.log(notasAprobadas)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // correccion
 const notas = Array.from({length: 6}, (_,i) => parseInt(prompt(`Dime la ${i+1} nota`))) // declarar asi mejor
 

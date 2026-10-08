@@ -4,6 +4,10 @@
 // Mostrar cada temperatura junto con su equivalente en Fahrenheit y si es
 // "Fría", "Templada" o "Calurosa".
 //################################################################################
+
+
+
+
 const temperaturasCorreccion = Array.from({length: 7}, () => Math.floor(Math.random()*41)-5)
 temperaturasCorreccion.forEach(t => {
     const f = (t * 9/5 + 32).toFixed(1);

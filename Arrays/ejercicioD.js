@@ -4,6 +4,39 @@
 // introduzca un 0. Mostrar los elementos introducidos y su suma.
 //################################################################################
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function sumarTodos( total, numero){
     return total + numero
 }
